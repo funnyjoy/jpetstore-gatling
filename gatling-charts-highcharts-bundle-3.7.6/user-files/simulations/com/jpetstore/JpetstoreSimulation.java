@@ -16,7 +16,7 @@ public class JpetstoreSimulation extends Simulation {
 	{
 		FeederBuilder<String> feeder = csv("jpetstore_users.csv").eager().shuffle().circular();
 
-		HttpProtocolBuilder httpProtocol = http.baseUrl("http://zuulserver:8080")
+		HttpProtocolBuilder httpProtocol = http.baseUrl("http://localhost:8080")
 				.inferHtmlResources(AllowList(), DenyList())
 				.acceptHeader(
 						"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
@@ -43,7 +43,7 @@ public class JpetstoreSimulation extends Simulation {
 
 		Map<CharSequence, String> headers_17 = new HashMap<>();
 		headers_17.put("Cache-Control", "max-age=0");
-		headers_17.put("Origin", "http://zuulserver:8080");
+		headers_17.put("Origin", "http://localhost:8080");
 		headers_17.put("Proxy-Connection", "keep-alive");
 		headers_17.put("Upgrade-Insecure-Requests", "1");
 
