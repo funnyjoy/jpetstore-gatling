@@ -56,7 +56,7 @@ public class JpetstoreSimulation extends Simulation {
 				.exec(http("request_0").get("/").headers(headers_0)
 						.resources(http("request_1").get("/catalog/").headers(headers_0),
 								http("request_2").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(2)
+				.pause(1)
 				.exec(http("request_3").get("/catalog/viewCategory?categoryId=FISH").headers(headers_0)
 						.resources(http("request_4").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 								http("request_5").get("/categories/FISH?_=1650854400576").headers(headers_5),
@@ -66,7 +66,7 @@ public class JpetstoreSimulation extends Simulation {
 						.resources(http("request_8").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 								http("request_9").get("/products/FI-FW-01?_=1650854402187").headers(headers_5),
 								http("request_10").get("/products/FI-FW-01/items?_=1650854402188").headers(headers_5)))
-				.pause(2)
+				.pause(1)
 				.exec(http("request_11").get("/catalog/viewItem?itemId=EST-4").headers(headers_0).resources(
 						http("request_12").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 						http("request_13").get("/items/EST-4?_=1650854405078").headers(headers_5),
@@ -74,11 +74,11 @@ public class JpetstoreSimulation extends Simulation {
 				.pause(1)
 				.exec(http("request_15").get("/cart/addItemToCart?workingItemId=EST-4").headers(headers_0)
 						.resources(http("request_16").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(5)
+				.pause(1)
 				.exec(http("request_17").post("/cart/updateCartQuantities").headers(headers_17)
 						.formParam("quantity[EST-4]", "20")
 						.resources(http("request_18").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(4)
+				.pause(1)
 				.exec(http("request_19").get("/catalog/viewCategory?categoryId=FISH").headers(headers_0).resources(
 						http("request_20").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 						http("request_21").get("/categories/FISH/products?_=1650854418261").headers(headers_5),
@@ -88,14 +88,14 @@ public class JpetstoreSimulation extends Simulation {
 						.resources(http("request_24").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 								http("request_25").get("/products/FI-FW-02?_=1650854420911").headers(headers_5),
 								http("request_26").get("/products/FI-FW-02/items?_=1650854420912").headers(headers_5)))
-				.pause(3)
+				.pause(1)
 				.exec(http("request_27").get("/cart/addItemToCart?workingItemId=EST-21").headers(headers_0)
 						.resources(http("request_28").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(3)
+				.pause(1)
 				.exec(http("request_29").post("/cart/updateCartQuantities").headers(headers_17)
 						.formParam("quantity[EST-4]", "20").formParam("quantity[EST-21]", "5")
 						.resources(http("request_30").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(2)
+				.pause(1)
 				.exec(http("request_31").get("/order/newOrderForm").headers(headers_0)
 						.resources(http("request_32").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
 				.pause(1).feed(feeder)
@@ -104,7 +104,7 @@ public class JpetstoreSimulation extends Simulation {
 						.formParam("submit", "Login")
 						.resources(http("request_34").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 								http("request_35").get("/resources/images/banner_dogs.gif").headers(headers_35)))
-				.pause(4)
+				.pause(1)
 				.exec(http("request_36").post("/order/newOrder").headers(headers_17).formParam("cardType", "Visa")
 						.formParam("creditCard", "999 9999 9999 9999").formParam("expiryDate", "12/03")
 						.formParam("billToFirstName", "ABC").formParam("billToLastName", "XYX")
@@ -128,14 +128,14 @@ public class JpetstoreSimulation extends Simulation {
 						.formParam("creditCard", "999 9999 9999 9999").formParam("expiryDate", "12/03")
 						.formParam("confirmed", "true")
 						.resources(http("request_39").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(2)
+				.pause(1)
 				.exec(http("request_40").get("/account/editAccountForm").headers(headers_0)
 						.resources(http("request_41").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(5)
+				.pause(1)
 				.exec(http("request_42").get("/account/signoff").headers(headers_0)
 						.resources(http("request_43").get("/catalog/").headers(headers_0),
 								http("request_44").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(3)
+				.pause(1)
 				.exec(http("request_45").get("/account/signonForm").headers(headers_0)
 						.resources(http("request_46").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
 				.pause(1)
@@ -143,7 +143,7 @@ public class JpetstoreSimulation extends Simulation {
 						.formParam("j_username", "#{j_username}").formParam("j_password", "#{j_password}")
 						.formParam("submit", "Login").resources(http("request_48").get("/catalog/").headers(headers_0),
 								http("request_49").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(7)
+				.pause(1)
 				.exec(http("request_50").get("/catalog/viewCategory?categoryId=FISH").headers(headers_0).resources(
 						http("request_51").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 						http("request_52").get("/categories/FISH/products?_=1650854468048").headers(headers_5),
@@ -182,10 +182,10 @@ public class JpetstoreSimulation extends Simulation {
 						.resources(http("request_79").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
 								http("request_80").get("/products/RP-SN-01?_=1650854480487").headers(headers_5),
 								http("request_81").get("/products/RP-SN-01/items?_=1650854480488").headers(headers_5)))
-				.pause(2)
+				.pause(1)
 				.exec(http("request_82").get("/cart/addItemToCart?workingItemId=EST-11").headers(headers_0)
 						.resources(http("request_83").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(3)
+				.pause(1)
 				.exec(http("request_84").post("/cart/updateCartQuantities").headers(headers_17)
 						.formParam("quantity[EST-11]", "1")
 						.resources(http("request_85").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2),
@@ -215,7 +215,7 @@ public class JpetstoreSimulation extends Simulation {
 						.formParam("creditCard", "999 9999 9999 9999").formParam("expiryDate", "12/03")
 						.formParam("confirmed", "true")
 						.resources(http("request_91").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)))
-				.pause(8)
+				.pause(1)
 				.exec(http("request_92").get("/account/signoff").headers(headers_0).resources(
 						http("request_93").get("/catalog/").headers(headers_0),
 						http("request_94").get("/webjars/jquery/3.5.1/jquery.min.js").headers(headers_2)));
