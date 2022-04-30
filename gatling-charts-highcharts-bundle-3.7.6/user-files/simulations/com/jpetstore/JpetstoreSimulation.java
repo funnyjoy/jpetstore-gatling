@@ -14,9 +14,9 @@ import static io.gatling.javaapi.jdbc.JdbcDsl.*;
 public class JpetstoreSimulation extends Simulation {
 
 	{
-		FeederBuilder<String> feeder = csv("jpetstore_users.csv").eager().shuffle().circular();
+		FeederBuilder<String> feeder = csv("jpetstore_users.csv").eager().circular();
 
-		HttpProtocolBuilder httpProtocol = http.baseUrl("http://localhost:8080")
+		HttpProtocolBuilder httpProtocol = http.baseUrl("http://ae06caf9485d14e14960dbd082baf3dc-1733804758.ap-northeast-2.elb.amazonaws.com:9090")
 				.inferHtmlResources(AllowList(), DenyList())
 				.acceptHeader(
 						"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
@@ -43,7 +43,7 @@ public class JpetstoreSimulation extends Simulation {
 
 		Map<CharSequence, String> headers_17 = new HashMap<>();
 		headers_17.put("Cache-Control", "max-age=0");
-		headers_17.put("Origin", "http://localhost:8080");
+		headers_17.put("Origin", "http://ae06caf9485d14e14960dbd082baf3dc-1733804758.ap-northeast-2.elb.amazonaws.com:9090");
 		headers_17.put("Proxy-Connection", "keep-alive");
 		headers_17.put("Upgrade-Insecure-Requests", "1");
 
@@ -223,9 +223,9 @@ public class JpetstoreSimulation extends Simulation {
 //		setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);
 //		setUp(scn.injectOpen(rampUsers(20).during(20))).protocols(httpProtocol);
 		setUp(scn.injectClosed(
-		  rampConcurrentUsers(1).to(20).during(60),
-		  constantConcurrentUsers(20).during(300),
-		  rampConcurrentUsers(20).to(1).during(60)
+		  rampConcurrentUsers(1).to(160).during(60),
+		  constantConcurrentUsers(160).during(600),
+		  rampConcurrentUsers(160).to(1).during(60)
 		)).protocols(httpProtocol);
 	}
 }
